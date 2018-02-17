@@ -23,9 +23,7 @@ The can be done by changing the parameter where the search instances are made, e
  And that's about it! 
  
  
- ...Oh, almost forgot the gif.
- 
- [Alt Text](https://media.giphy.com/media/gOkawaguYNiSI/giphy.gif)
+ [...Oh, almost forgot the gif.](https://media.giphy.com/media/gOkawaguYNiSI/giphy.gif)
  
 
    
