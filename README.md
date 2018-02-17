@@ -3,7 +3,7 @@
 Hello and welcome to my searcher!
  
 It consists of a library containing classes for both the json search and csv search, which inherit from a base class 'Search'. 
-This makes it more obviously which methods are used in which secnario, and is better for future proofing!
+This makes it more obviously which methods are used in which scenario, and is better for future proofing!
 
 # Set up and Running
 Clone the repo, then in a terminal, cd to the directory and run ./searcher.py. 
