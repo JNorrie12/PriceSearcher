@@ -102,10 +102,15 @@ class SearchCsv(Search):
 	def parseResultCsv(self ):
 		if self.output == None:			#Case where no product is found.
 			return 0
-		self.output[1]=self.output[1][2:-1]
-		self.output[2]=self.output[2][2:-1]
-		self.output[3]=self.output[3][2:-1]
-		self.output[4]=float(self.output[4][2:-1])
+
+		for i in range(1, 5):			#Parsing the individual fields.
+			self.output[i]=self.output[i][2:-1]
+			if self.output[i] =="":
+				self.output[i] = None
+
+			if (i ==4 and self.output[i] != None):
+				self.output[i]=float(self.output[i])
+
 		if "y" in self.output[5]:
 			self.output[5] = True
 		elif "n" in self.output[5]:
