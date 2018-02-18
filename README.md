@@ -18,7 +18,7 @@ The can be done by changing the parameter where the search instances are made, e
     z = The id we'd like to search
   
     the instance p = Search.Json(...) follows the same format.
-    
+The output is written to a file "output.json".
     
  # Technical Explanations
  price.py  contains classes for both the json search and csv search, which inherit from a base class 'Search'.
