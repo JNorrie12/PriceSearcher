@@ -2,6 +2,8 @@
 import time
 from price import SearchCsv, SearchJson
 
+
+
 def main():
 	x = raw_input("Welcome to my search! Would you like to run the Json or Csv example?")
 	if x.lower() == "csv" :

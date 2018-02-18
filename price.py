@@ -31,17 +31,18 @@ class Search:
 		L = len(self.data)
 		R = 0
 		mid = len(self.data)/2 
-
-		while mid > 1:
-			mid = (L+R)/2
+		diff = L-R
+		while diff > 1:
+			mid = (L+R)/2	#Set the mid point of the range [R,L]
+			diff = L-R	#Update diff
 			bisecval = self.data[mid][0]
 			if bisecval > self.iid:
 
-				L = mid - 1
+				L = mid - 1	#Set the new L
 
 			elif bisecval < self.iid:
 
-				R = mid + 1
+				R = mid + 1	#Set the new R
 
 			else:
 
@@ -99,6 +100,8 @@ class SearchCsv(Search):
 
 	#Csv has loads of wierd buffer characters so we need to clean the data up. Also change yes and no to true and false.
 	def parseResultCsv(self ):
+		if self.output == None:			#Case where no product is found.
+			return 0
 		self.output[1]=self.output[1][2:-1]
 		self.output[2]=self.output[2][2:-1]
 		self.output[3]=self.output[3][2:-1]
@@ -162,6 +165,8 @@ class SearchJson(Search):
 
 	#Change the yes and no's so trues and falses
 	def parseOutput(self):
+		if self.output == None:
+			return 0
 		if "y" in self.output[5]:
 			self.output[5] = True
 		elif "n" in self.output[5]:
