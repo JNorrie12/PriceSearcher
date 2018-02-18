@@ -26,6 +26,9 @@ This makes it more obvious which methods are used in which scenario, and is more
 
 A search with data this big takes roughly 1.5 seconds, most of which is due to python's sorting method (the actualy binary search accounts for about 0.05 seconds). This is the obvious bottle neck and in future I would concentrate on changing this to a asymptotically faster sort such as a Radix sort. I decided not to implement this here as I wanted to keep as close to the 2-3 hour guide line set out!
 
+The searching and sorting also work using the string values rather than integar values of the id's. This is equivelant to the cumulative ascii value of the string and just saves a lot of time converting back and forth!
+
+
  And that's about it! 
  
  
